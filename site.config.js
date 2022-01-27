@@ -29,7 +29,7 @@ module.exports = {
 
   // image CDN host to proxy all image requests through (optional)
   // NOTE: this requires you to set up an external image proxy
-  imageCDNHost: "https://image.laomiao.workers.dev",
+  imageCDNHost: "",
 
   // Utteranc.es comments via GitHub issue comments (optional)
   utterancesGitHubRepo: null,
