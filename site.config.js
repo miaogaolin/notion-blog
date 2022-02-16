@@ -44,6 +44,5 @@ module.exports = {
   // example:
   //
   pageUrlOverrides: {
-    '/posts/ms/zigzag': '7b0915fbdd4b48f8815b8767bb2f6098'
   }
 }
