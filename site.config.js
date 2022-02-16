@@ -43,8 +43,8 @@ module.exports = {
   // any pages defined here will override their default URL paths
   // example:
   //
-     pageUrlOverrides: {
-       '/tools': '3fcb411445e94944b0d6cea47b81b7d0'
-     }
+  pageUrlOverrides: {
+    '/tools': '3fcb411445e94944b0d6cea47b81b7d0'
+  },
   pageUrlOverrides: null
 }
