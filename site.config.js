@@ -45,6 +45,5 @@ module.exports = {
   //
   pageUrlOverrides: {
     '/tools': '3fcb411445e94944b0d6cea47b81b7d0'
-  },
-  pageUrlOverrides: null
+  }
 }
