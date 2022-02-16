@@ -44,7 +44,6 @@ module.exports = {
   // example:
   //
   pageUrlOverrides: {
-    '/tools': '3fcb411445e94944b0d6cea47b81b7d0',
     '/posts/ms/zigzag': '7b0915fbdd4b48f8815b8767bb2f6098'
   }
 }
