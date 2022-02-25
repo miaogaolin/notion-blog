@@ -44,5 +44,8 @@ module.exports = {
   // example:
   //
   pageUrlOverrides: {
-  }
+  },
+
+  // Image size on unplash site
+  imageWidth: 800
 }
