@@ -5,7 +5,7 @@ export const mapNotionImageUrl = (url: string, block: Block) => {
   if (!url) {
     return null
   }
-
+  console.log(block);
   if (url.startsWith('data:')) {
     return url
   }
@@ -33,6 +33,7 @@ export const mapNotionImageUrl = (url: string, block: Block) => {
     notionImageUrlV2.searchParams.set('table', table)
     notionImageUrlV2.searchParams.set('id', block.id)
     notionImageUrlV2.searchParams.set('cache', 'v2')
+    notionImageUrlV2.searchParams.set('width', imageWidth.toString())
 
     url = notionImageUrlV2.toString()
   } else {
