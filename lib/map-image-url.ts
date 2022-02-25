@@ -1,5 +1,5 @@
 import { Block } from 'notion-types'
-import { imageCDNHost } from './config'
+import { imageCDNHost, imageWidth } from './config'
 
 export const mapNotionImageUrl = (url: string, block: Block) => {
   if (!url) {
@@ -39,6 +39,9 @@ export const mapNotionImageUrl = (url: string, block: Block) => {
     // optimize image
     // webp
     url = url.replace(/fm=(gif|jpeg|png|jpg|bmp)/i, "fm=webp")
+    if (imageWidth && !url.match(/(\?|=)w=\d+/)) {
+      url += "&w=" + imageWidth
+    }
   }
 
   // console.log({ url, origUrl })
