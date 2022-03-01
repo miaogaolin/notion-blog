@@ -5176,9 +5176,9 @@ state-toggle@^1.0.0:
   resolved "https://registry.yarnpkg.com/state-toggle/-/state-toggle-1.0.3.tgz#e123b16a88e143139b09c6852221bc9815917dfe"
   integrity sha512-d/5Z4/2iiCnHw6Xzghyhb+GcmF89bxwgXG60wjIiZaxnymbyOmI8Hk4VqHXiVVp6u2ysaskFfXg3ekCj4WNftQ==
 
-static-tweets@^0.5.3:
+static-tweets@0.5.3:
   version "0.5.3"
-  resolved "https://registry.yarnpkg.com/static-tweets/-/static-tweets-0.5.3.tgz#ca65630a8cc6c84a5fa98368bafc85685eb2dcf2"
+  resolved "https://registry.npmmirror.com/static-tweets/-/static-tweets-0.5.3.tgz#ca65630a8cc6c84a5fa98368bafc85685eb2dcf2"
   integrity sha512-uGjAK8iaA7lL9OngkeRIM4Dh2J8J9IUeEPmQexiwfY5ao1dU88j/HGIfqrj/HglgU9n1SuWSVoFwXWmC1Vpf2A==
   dependencies:
     "@mapbox/rehype-prism" "^0.5.0"

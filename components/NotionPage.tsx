@@ -136,8 +136,13 @@ export const NotionPage: React.FC<types.PageProps> = ({
     block
   )
 
-  const socialDescription =
-    getPageDescription(block, recordMap) ?? config.description
+  let socialDescription = ""
+  try {
+    socialDescription = getPageDescription(block, recordMap) ?? config.description
+  } catch (err) {
+    console.log("descrption error:", err)
+  }
+
 
   let comments: React.ReactNode = null
   let pageAside: React.ReactChild = null
