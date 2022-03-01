@@ -9,8 +9,10 @@ This is my portfolio site (see here). It is using the following starter:
 https://github.com/transitive-bullshit/nextjs-notion-starter-kit
 
 # Develop?
+```bash
 yarn
 yarn dev
+```
 Go to http://localhost:3000
 
 # Deploy?
