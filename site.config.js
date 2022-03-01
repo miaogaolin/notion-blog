@@ -1,24 +1,24 @@
 module.exports = {
   // where it all starts -- the site's root Notion page (required)
-  rootNotionPageId: 'c811c01b7d824f5ba966f688ee37652b',
+  rootNotionPageId: '8f7aed59ac35432dac4ccd55bae71f04',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: '老苗',
-  domain: 'laomiao.site',
-  author: '老苗',
+  name: '半生瓜不是半生都瓜',
+  domain: 'zq.laomiao.site',
+  author: '小张',
 
   // open graph metadata (optional)
-  description: '专注技术、持续学习',
-  socialImageTitle: '潇洒哥老苗',
+  description: '生活还是生活',
+  socialImageTitle: '小张',
   socialImageSubtitle: 'Hello World! 👋',
 
   // social usernames (optional)
-  twitter: 'laomiao_',
-  github: 'miaogaolin',
+  twitter: '',
+  github: '',
   linkedin: '',
 
   // default notion icon and cover images for site-wide consistency (optional)
