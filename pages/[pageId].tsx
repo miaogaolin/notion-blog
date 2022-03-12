@@ -50,7 +50,7 @@ export async function getStaticPaths() {
     fallback: true
   }
 
-  console.log(ret.paths)
+  console.log("paths:", ret.paths)
   return ret
 }
 

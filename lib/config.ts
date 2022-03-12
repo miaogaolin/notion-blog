@@ -79,6 +79,9 @@ export const utterancesGitHubRepo: string | null = getSiteConfig(
 // Optional image CDN host to proxy all image requests through
 export const imageCDNHost: string | null = getSiteConfig('imageCDNHost', null)
 
+//Optional image size
+export const imageWidth: number | null = getSiteConfig('imageWidth', null)
+
 // Optional whether or not to enable support for LQIP preview images
 // (requires a Google Firebase collection)
 export const isPreviewImageSupportEnabled: boolean = getSiteConfig(
@@ -115,8 +118,8 @@ export const fathomId = isDev ? null : process.env.NEXT_PUBLIC_FATHOM_ID
 
 export const fathomConfig = fathomId
   ? {
-      excludedDomains: ['localhost', 'localhost:3000']
-    }
+    excludedDomains: ['localhost', 'localhost:3000']
+  }
   : undefined
 
 const defaultEnvValueForPreviewImageSupport =

@@ -29,7 +29,7 @@ module.exports = {
 
   // image CDN host to proxy all image requests through (optional)
   // NOTE: this requires you to set up an external image proxy
-  imageCDNHost: "https://image.laomiao.workers.dev",
+  imageCDNHost: "",
 
   // Utteranc.es comments via GitHub issue comments (optional)
   utterancesGitHubRepo: null,
@@ -43,9 +43,9 @@ module.exports = {
   // any pages defined here will override their default URL paths
   // example:
   //
-  // pageUrlOverrides: {
-  //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-  //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
-  // }
-  pageUrlOverrides: null
+  pageUrlOverrides: {
+  },
+
+  // Image size
+  imageWidth: 800
 }
