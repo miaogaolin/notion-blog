@@ -1,23 +1,27 @@
 import * as React from 'react'
-import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { IoSunnyOutline, IoMoonSharp } from 'react-icons/io5'
+import { useTheme } from 'next-themes'
+import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
+import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
+import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
+import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
+import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
+import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
 import * as config from 'lib/config'
 
 import styles from './styles.module.css'
 
 // TODO: merge the data and icons from PageSocial with the social links in Footer
 
-export const Footer: React.FC<{
-  isDarkMode: boolean
-  toggleDarkMode: () => void
-}> = ({ isDarkMode, toggleDarkMode }) => {
+export const FooterImpl: React.FC = () => {
   const [hasMounted, setHasMounted] = React.useState(false)
-  const toggleDarkModeCb = React.useCallback(
+  const { setTheme, resolvedTheme } = useTheme()
+
+  const onToggleDarkMode = React.useCallback(
     (e) => {
       e.preventDefault()
-      toggleDarkMode()
+      setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
     },
-    [toggleDarkMode]
+    [resolvedTheme, setTheme]
   )
 
   React.useEffect(() => {
@@ -28,17 +32,19 @@ export const Footer: React.FC<{
     <footer className={styles.footer}>
       <div className={styles.copyright}>Copyright 2022 {config.author}</div>
 
-      {hasMounted ? (
-        <div className={styles.settings}>
+      <div className={styles.settings}>
+        {hasMounted && (
           <a
             className={styles.toggleDarkMode}
-            onClick={toggleDarkModeCb}
+            href='#'
+            role='button'
+            onClick={onToggleDarkMode}
             title='Toggle dark mode'
           >
-            {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
+            {resolvedTheme === 'dark' ? <IoMoonSharp /> : <IoSunnyOutline />}
           </a>
-        </div>
-      ) : null}
+        )}
+      </div>
 
       <div className={styles.social}>
         {config.twitter && (
@@ -50,6 +56,18 @@ export const Footer: React.FC<{
             rel='noopener noreferrer'
           >
             <FaTwitter />
+          </a>
+        )}
+
+        {config.zhihu && (
+          <a
+            className={styles.zhihu}
+            href={`https://zhihu.com/people/${config.zhihu}`}
+            title={`Zhihu @${config.zhihu}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaZhihu />
           </a>
         )}
 
@@ -80,3 +98,5 @@ export const Footer: React.FC<{
     </footer>
   )
 }
+
+export const Footer = React.memo(FooterImpl)
