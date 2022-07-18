@@ -21,6 +21,7 @@ export default siteConfig({
   github: 'miaogaolin',
   linkedin: '',
   zhihu: 'fan-zhong-li-luo-xie',
+  language: 'zh',
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
 
