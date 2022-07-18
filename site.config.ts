@@ -14,12 +14,13 @@ export default siteConfig({
   author: '老苗',
 
   // open graph metadata (optional)
-  description: '专注技术、持续学习e',
+  description: '专注技术、持续学习',
 
   // social usernames (optional)
   twitter: 'laomiao_',
   github: 'miaogaolin',
   linkedin: '',
+  zhihu: 'fan-zhong-li-luo-xie',
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
 
